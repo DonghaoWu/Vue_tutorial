@@ -44,7 +44,7 @@
 
 21. use event listener shorthand way. `@`
 
-22. change the lastName input field method from `v-model` way to `event listener way` ---`:value | @input`. recommand
+22. change the lastName input field method from `v-model` way to `event listener way` ---`:value | @input`. recommanded
 
 23. Add an update last name method.
 
@@ -54,7 +54,23 @@
 
 26. add a event modifier so that we don't need `event.preventDefault()` --- `@input.prevent`
 
-27. 
+27. add a new variable, `middleName:''`
+
+28. add a new input element to control the middleName field. with `@keyup` listener.
+
+29. add a new method to the `keyup` listener. --- `updateMiddleName`
+
+30. add `enter` modifier to `keyup` event. 这样就可以实现 input 之后按下 enter 才能修改 middleName。
+
+31. add a input field with `v-model` to control the age variable. --- `type='text'`
+
+32. change the input type from 'text' to 'number'.但这只能强制输入的是数字，但回传的仍然是 `string`。
+
+33. add `number` modifier to `v-model`,这样就可以强制使回传的数据类型是 number。
+
+34. add `lazy.trim` modifier to firstName input field.
+
+35. 
 
 ---
 

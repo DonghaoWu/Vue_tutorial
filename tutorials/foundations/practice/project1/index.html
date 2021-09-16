@@ -8,12 +8,16 @@
   <body>
     <div id="app" v-cloak>
       <p>First name: {{firstName}}</p>
+      <p>Middle name: {{middleName}}</p>
       <p>Last name: {{lastName}}</p>
       <p>Inline full name: {{`${firstName} ${lastName.toUpperCase()}`}}</p>
       <p>Methods full name: {{fullName()}}</p>
 
       <label>First name</label>
       <input type="text" v-model="firstName" />
+
+      <label>Middle name</label>
+      <input type="text" @keyup="updateMiddleName" />
 
       <label>Last name</label>
       <input
@@ -25,7 +29,9 @@
       <p><a :href="url" target="_blank">Google: binding attribute</a></p>
       <p v-html="raw_url"></p>
 
-      <p>Age:{{age}}</p>
+      <p>Age:{{typeof age}}</p>
+
+      <input type="number" v-model.number="age" />
       <button type="button" v-on:click="increment">
         Increment in methods way
       </button>
