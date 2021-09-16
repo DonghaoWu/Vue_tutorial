@@ -186,4 +186,26 @@ circle_classes(){
 
 5. conditional rendering.
 
-6. 
+6. create a new variable, `mode : 1`
+
+7. create three p tags, with
+
+```html
+v-if / v-else-if / v-else
+```
+
+- controlled by the `mode` variable
+
+8. add a select tags, with three opitons, v-model to `mode`
+
+9. apply the v-show directive.
+
+10. add this.
+
+```html
+<i v-show="mode == 1">v-show</i>
+```
+
+11. v-show 的意思是 display:none, 然而 element 还是存在的，而 v-if 展示出来的是使 element `删除`。
+
+12. 

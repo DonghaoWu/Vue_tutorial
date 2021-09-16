@@ -6,7 +6,19 @@
   </head>
 
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <p v-if="mode == 1">1. Showing v-if directive content</p>
+      <h3 v-else-if="mode == 2">2. Showing v-else-if directive content</h3>
+      <p v-else>3. Showing v-else directive content</p>
+
+      <i v-show="mode == 1">v-show</i>
+
+      <select v-model="mode">
+        <option value="1">v-if</option>
+        <option value="2">v-else-if</option>
+        <option value="3">v-else</option>
+      </select>
+    </div>
 
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
