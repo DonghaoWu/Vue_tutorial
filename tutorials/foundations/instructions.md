@@ -70,7 +70,36 @@
 
 34. add `lazy.trim` modifier to firstName input field.
 
-35. 
+35. remove the `lazy` modifier. 主要作用是不会马上显示更新。
+
+36. computed feature. 引入这个功能的原因是当一个 method 调用时，其他 method 也可能调用，比如 {`{fullName()}}` 相当于调用一个 function，当 data 发生变化时会发生类似于 rerender 的动作，从而再一次调用了 `fullName fucntion`.
+
+37. add a new key in createApp object, called `computed`, move the fullname function into in.
+
+38. Change
+
+```html
+<p>{{fullName()}}</p>
+// delete
+
+<p>{{fullName}}</p>
+```
+
+39. fullName 的调用一开始是跟随 re-render 或者 data variable change 的，到后来在 computed 中只跟随 data variable change 而调用。`任何在 computed fucntion 里面的 data 变量一旦发生变化，function 就会被 invoke`
+
+40. add a new key in createApp object, called `watch`,
+
+41. 如果特定变量变化了，执行 watch 里面的对应函数。`这个说法错误。`
+
+```js
+watch:{
+  age{newVal, oldVal}{
+    setTimeout(()=>{
+      this.age = 20;
+    },3000)
+  }
+}
+```
 
 ---
 
@@ -78,7 +107,73 @@
 
 1. add Vue cdn in index.html
 2. add create function in app.js
-3.
+3. run the index.html file in Browser
+4. install Vue Devtools extension.(Get the chrome extension)
+
+5. bind a new class to the div with content `Hi`
+
+6. the class name is `purple`, controlled by a data variabel called isPurple.
+
+7. add a new variable called `isPurple` in data.
+
+8. add a v-model into checkbox, called `isPurple`
+
+9. 值得注意的是，第 8 步直接实现了 value toggle。
+
+10. add a computed object, with a function called `circle_classes`
+
+```js
+circle_classes(){
+  return {purple:this.isPurple}
+}
+```
+
+11. change
+
+```html
+// delete
+<div class="circle" :class="{purple:isPurple}">Hi!</div>
+
+// add
+<div class="circle" :class="circle_classes">Hi!</div>
+```
+
+12. add select tag with three options.
+
+13. add a v-modle into select tag
+
+14. add a new variable called 'selectedColor'
+
+15. bind the div class to `selectedColor`
+
+16. use this to bind mutiple classes.
+
+```js
+:class = '[selectedColor, circle_classes]'
+```
+
+17. binding styles.
+
+18. add a new variable `size:150`
+
+19. create an input tag, type is number, `v-model to size`.
+
+20. bind the style with
+
+```html
+<div
+  class="circle"
+  :class="[selectedColor, circle_classes]"
+  :style='{width: size + "px", height:size + "px"}'
+></div>
+```
+
+21. add a new style property to style, add `[]`,
+
+```html
+:style='[ {width: size + "px", height:size + "px", lineHeight:size + "px"},
+{transform:"rotate(300deg)"} ]'
+```
 
 ---
 
@@ -86,4 +181,9 @@
 
 1. add Vue cdn in index.html
 2. add create function in app.js
-3.
+3. run the index.html file in Browser
+4. install Vue Devtools extension.(Get the chrome extension).
+
+5. conditional rendering.
+
+6. 
