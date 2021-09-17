@@ -1,5 +1,7 @@
 ### This is the instructions about Vue tutorials.
 
+### Vue Foundations.
+
 ---
 
 - project 1:
@@ -208,4 +210,42 @@ v-if / v-else-if / v-else
 
 11. v-show 的意思是 display:none, 然而 element 还是存在的，而 v-if 展示出来的是使 element `删除`。
 
-12. 
+---
+
+- project 4:
+
+1. add Vue cdn in index.html
+2. add create function in app.js
+3. run the index.html file in Browser
+4. install Vue Devtools extension.(Get the chrome extension).
+
+5. map through the birds data and people data.
+
+6. add a unorder list in the `#app ` div.
+
+7. add `v-for = "bird in birds"`
+
+8. add (bird, index)
+
+9. add another unorder list to render `people` variable.
+
+10. create another way to loop through the person object.
+
+---
+
+- project 5:
+
+1. add Vue cdn in index.html
+2. add create function in app.js
+3. run the index.html file in Browser
+4. install Vue Devtools extension.(Get the chrome extension).
+
+5. map through the people data and render them in cards.
+
+6. add a click event listener in button, bind to a function named `move`
+
+7. add function move in methods.
+
+8. add a input field into the card loop div.
+
+9. add `:key` attribute into the div, to bind all elments inside a single card.
