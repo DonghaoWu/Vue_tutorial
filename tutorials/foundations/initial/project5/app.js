@@ -4,17 +4,17 @@ let vm = Vue.createApp({
       people: [
         {
           name: 'John',
-          message: 'Hello world!'
+          message: 'Hello world!',
         },
         {
           name: 'Rick',
-          message: 'I like pie.'
+          message: 'I like pie.',
         },
         {
           name: 'Amy',
-          message: 'Skydiving is fun!'
-        }
-      ]
-    }
-  }
-}).mount('#app')
+          message: 'Skydiving is fun!',
+        },
+      ],
+    };
+  },
+}).mount('#app');
