@@ -50,10 +50,15 @@ export default new Vuex.Store({
       commit('SET_SPINNER', true);
       return new Promise((reslove) => {
         setTimeout(async () => {
-          let res = await fetch('data.json');
-          let val = await res.json();
-          reslove(val);
-          commit('SET_SPINNER', false);
+          try {
+            let res = await fetch('dat.json');
+            let val = await res.json();
+            reslove(val);
+            commit('SET_SPINNER', false);
+          } catch (error) {
+            console.log('error occurs in fetchData ===>', error);
+            commit('SET_SPINNER', false);
+          }
         }, 1000);
       });
     },
