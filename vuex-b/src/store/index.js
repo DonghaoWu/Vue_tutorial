@@ -51,7 +51,7 @@ export default new Vuex.Store({
       return new Promise((reslove) => {
         setTimeout(async () => {
           try {
-            let res = await fetch('dat.json');
+            let res = await fetch('data.json');
             let val = await res.json();
             reslove(val);
             commit('SET_SPINNER', false);
